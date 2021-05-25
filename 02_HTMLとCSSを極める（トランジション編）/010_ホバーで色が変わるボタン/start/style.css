@@ -1,0 +1,28 @@
+html {
+  font-size: 30px;
+}
+
+#container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.btn {
+  background-color: #0073bb;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  -webkit-transition-property: all;
+  transition-property: all;
+}
+
+.btn:hover {
+  background-color: #249ce6;
+}
+/*# sourceMappingURL=style.css.map */

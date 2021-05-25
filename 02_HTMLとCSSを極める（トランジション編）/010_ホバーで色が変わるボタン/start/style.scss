@@ -1,0 +1,29 @@
+$main-color: #0073bb;
+$hover-color: #249ce6;
+
+html {
+  font-size: 30px;
+}
+
+#container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.btn {
+  background-color: $main-color;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  transition: 300ms ease;
+  transition-property: all;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+}
