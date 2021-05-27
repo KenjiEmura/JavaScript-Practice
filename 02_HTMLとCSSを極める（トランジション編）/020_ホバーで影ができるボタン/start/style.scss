@@ -1,22 +1,41 @@
-$cWhite: white;
-$cBlack: black;
+$main-color: #249ce6;
+$hover-color: #0073bb;
+$shadow: #0073bb7a;
+$background-color: #ffffff;
+
+html {
+  font-size: 16px;
+  background-color: $background-color;
+}
 
 #container {
   text-align: center;
+  margin: 2rem 0;
 }
 
 .btn {
-  background-color: $cWhite;
-  color: $cBlack;
-  border: 1px solid $cBlack;
-  padding: 10px 40px;
-  margin: 50px 0;
-  font-weight: 600;
+  background-color: $main-color;
+  color: white;
   cursor: pointer;
-  transition: all 0.3s;
+  padding: 1rem 1.8rem;
+  border: 0 solid transparent;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  transition: 500ms ease;
+  transition-property: all;
 
-  &:hover {
-    background-color: $cBlack;
-    color: $cWhite;
+  &.float {
+    box-shadow: 4px 4px 10px 0 #8a8a8aa4,
+      inset 4px 4px 4px 0 #37b2ff,
+      inset -4px -4px 4px 0 #0073bb;
+    &:hover {
+      box-shadow: 4px 4px 20px 0px $shadow;
+      box-shadow: 4px 4px 20px 0px $shadow;
+    }
   }
+
+  // &:hover {
+  //   background-color: $hover-color;
+  // }
 }

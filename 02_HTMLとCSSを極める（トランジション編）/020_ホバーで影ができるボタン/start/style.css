@@ -1,21 +1,36 @@
+html {
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
 #container {
   text-align: center;
+  margin: 2rem 0;
 }
 
 .btn {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  padding: 10px 40px;
-  margin: 50px 0;
-  font-weight: 600;
+  background-color: #249ce6;
+  color: white;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  padding: 1rem 1.8rem;
+  border: 0 solid transparent;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  -webkit-transition-property: all;
+  transition-property: all;
 }
 
-.btn:hover {
-  background-color: black;
-  color: white;
+.btn.float {
+  -webkit-box-shadow: 4px 4px 10px 0 #8a8a8aa4, inset 4px 4px 4px 0 #37b2ff, inset -4px -4px 4px 0 #0073bb;
+          box-shadow: 4px 4px 10px 0 #8a8a8aa4, inset 4px 4px 4px 0 #37b2ff, inset -4px -4px 4px 0 #0073bb;
+}
+
+.btn.float:hover {
+  -webkit-box-shadow: 4px 4px 20px 0px #0073bb7a;
+          box-shadow: 4px 4px 20px 0px #0073bb7a;
+  box-shadow: 4px 4px 20px 0px #0073bb7a;
 }
 /*# sourceMappingURL=style.css.map */
