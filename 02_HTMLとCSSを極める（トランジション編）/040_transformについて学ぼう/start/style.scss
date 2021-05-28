@@ -3,4 +3,10 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
+  // border-radius: 10px;
+  transition: transform 300ms ease;
+  transform-origin: 0 100px;
+  &:hover {
+    transform: rotate(45deg);
+  }
 }
