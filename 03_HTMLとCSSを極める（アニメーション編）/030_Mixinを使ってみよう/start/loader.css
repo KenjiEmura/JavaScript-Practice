@@ -7,8 +7,19 @@ body {
   width: 100px;
   height: 100px;
   background-color: black;
-  -webkit-animation: sk-bouncedelay 1.4s;
-          animation: sk-bouncedelay 1.4s;
+  -webkit-animation-name: myAnimation;
+          animation-name: myAnimation;
+  -webkit-animation-duration: 1200ms;
+          animation-duration: 1200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  border: 10px solid red;
 }
 
 .paused {
@@ -16,7 +27,7 @@ body {
           animation-play-state: paused;
 }
 
-@-webkit-keyframes sk-bouncedelay {
+@-webkit-keyframes myAnimation {
   from {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -29,7 +40,7 @@ body {
   }
 }
 
-@keyframes sk-bouncedelay {
+@keyframes myAnimation {
   from {
     -webkit-transform: scale(0);
             transform: scale(0);

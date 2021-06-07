@@ -1,0 +1,40 @@
+$cBlack: black;
+$animationDuration: 600ms;
+
+body {
+  background-color: #d9eeff;
+}
+
+.three-dot-spinner {
+  text-align: center;
+  div {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: $cBlack;
+    border-radius: 50%;
+    animation: myAnimation $animationDuration infinite alternate ease-in-out;
+    animation-timing-function: ease;
+    // animation-delay: 1s;
+    // animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &.bounce1 {
+      animation-delay: calc(#{$animationDuration} / -4);
+    }
+    &.bounce2 {
+      animation-delay: calc(2 *#{$animationDuration} / -4);
+    }
+    &.bounce3 {
+      animation-delay: calc(3 *#{$animationDuration} / -4);
+    }
+  }
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
