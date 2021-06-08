@@ -1,6 +1,66 @@
 @import "mixin";
+$main-color: #464646;
 
 .try {
+  // transform-style: preserve-3d;
   /** ここに記述しよう */
-  
+  position: relative;
+  .spinner {
+    background: $main-color;
+    height: 40px;
+    width: 40px;
+    margin: 100px auto;
+    @include animation(
+      $name: spinner,
+      $iteration-count: infinite,
+      $duration: 1.2s,
+      $timing-function: ease-in-out
+    );
+  }
+
+  .double-spinner {
+    position: relative;
+    & div:nth-child(1) {
+      margin: 0 auto;
+      background-color: #00000080;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      position: relative;
+      @include animation(
+        $name: double1,
+        $iteration-count: infinite,
+        $duration: 1.2s,
+        $timing-function: ease-in-out
+      );
+    }
+    & div:nth-child(2) {
+      background-color: #00000080;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include animation(
+        $name: double2,
+        $iteration-count: infinite,
+        $duration: 1.2s,
+        $timing-function: ease-in-out
+      );
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
 }

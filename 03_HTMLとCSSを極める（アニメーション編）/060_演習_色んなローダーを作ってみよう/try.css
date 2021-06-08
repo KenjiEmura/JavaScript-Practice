@@ -1,5 +1,110 @@
 @charset "UTF-8";
 .try {
   /** ここに記述しよう */
+  position: relative;
+}
+
+.try .spinner {
+  background: #464646;
+  height: 40px;
+  width: 40px;
+  margin: 100px auto;
+  -webkit-animation-name: spinner;
+          animation-name: spinner;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.try .double-spinner {
+  position: relative;
+}
+
+.try .double-spinner div:nth-child(1) {
+  margin: 0 auto;
+  background-color: #00000080;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  -webkit-animation-name: double1;
+          animation-name: double1;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.try .double-spinner div:nth-child(2) {
+  background-color: #00000080;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-name: double2;
+          animation-name: double2;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
+            transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+            transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
+            transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+            transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
 }
 /*# sourceMappingURL=try.css.map */
