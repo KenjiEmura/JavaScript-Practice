@@ -1,1 +1,117 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  position: relative;
+  height: 100vh;
+  background-color: teal;
+}
+
+.animate-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  font-size: 2em;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.animate-title.inview {
+  opacity: 1;
+}
+
+.animate-title.inview .char {
+  display: inline-block;
+  -webkit-animation-name: animate-chars;
+          animation-name: animate-chars;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animate-title.inview .char:nth-child(1) {
+  -webkit-animation-delay: 0.055s;
+          animation-delay: 0.055s;
+}
+
+.animate-title.inview .char:nth-child(2) {
+  -webkit-animation-delay: 0.11s;
+          animation-delay: 0.11s;
+}
+
+.animate-title.inview .char:nth-child(3) {
+  -webkit-animation-delay: 0.165s;
+          animation-delay: 0.165s;
+}
+
+.animate-title.inview .char:nth-child(4) {
+  -webkit-animation-delay: 0.22s;
+          animation-delay: 0.22s;
+}
+
+.animate-title.inview .char:nth-child(5) {
+  -webkit-animation-delay: 0.275s;
+          animation-delay: 0.275s;
+}
+
+.animate-title.inview .char:nth-child(6) {
+  -webkit-animation-delay: 0.33s;
+          animation-delay: 0.33s;
+}
+
+.animate-title.inview .char:nth-child(7) {
+  -webkit-animation-delay: 0.385s;
+          animation-delay: 0.385s;
+}
+
+.animate-title.inview .char:nth-child(8) {
+  -webkit-animation-delay: 0.44s;
+          animation-delay: 0.44s;
+}
+
+.animate-title.inview .char:nth-child(9) {
+  -webkit-animation-delay: 0.495s;
+          animation-delay: 0.495s;
+}
+
+@-webkit-keyframes animate-chars {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-510%);
+            transform: translateY(-510%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: tarnslateY(0);
+            transform: tarnslateY(0);
+  }
+}
+
+@keyframes animate-chars {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-510%);
+            transform: translateY(-510%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: tarnslateY(0);
+            transform: tarnslateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

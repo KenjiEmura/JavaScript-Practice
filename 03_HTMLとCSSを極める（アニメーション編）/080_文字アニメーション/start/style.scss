@@ -1,0 +1,54 @@
+@import "mixin";
+
+$cWhite: white;
+
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  position: relative;
+  height: 100vh;
+  background-color: teal;
+}
+
+.animate-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $cWhite;
+  opacity: 0;
+  font-size: 2em;
+  font-family: 'Permanent Marker', cursive;
+  &.inview {
+    opacity: 1;
+    & .char {
+      display: inline-block;
+      @include animation(
+        $name: animate-chars,
+        $duration: 0.5s,
+        $fill-mode: both
+      );
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.055s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(-510%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: tarnslateY(0);
+  }
+}
